@@ -45,8 +45,7 @@ public class FunctionServerApplication {
 
 			if(product.getName().length() < 3)
 				return "Invalid name: the name must have at least 3 characters.";
-
-			return "OK! The product is valid!";
+			return "OK";
 		});
 	}
 
