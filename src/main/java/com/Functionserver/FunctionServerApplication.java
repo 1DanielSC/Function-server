@@ -33,6 +33,9 @@ public class FunctionServerApplication {
 
 			if(product.getPrice() < 0.0)
 				return "Invalid price: the price is negative.";
+
+			if(product.getPrice() > 10000.0)
+				return "Invalid price: the price is too high.";
 			
 			if(product.getQuantity() < 0)
 				return "Invalid quantity: the quantity is negative.";
@@ -40,7 +43,10 @@ public class FunctionServerApplication {
 			if(product.getQuantity() >= Long.MAX_VALUE-1)
 				return "Invalid quantity: the quantity is too high.";
 
-			return "OK";
+			if(product.getName().length() < 3)
+				return "Invalid name: the name must have at least 3 characters.";
+
+			return "OK! The product is valid!";
 		});
 	}
 

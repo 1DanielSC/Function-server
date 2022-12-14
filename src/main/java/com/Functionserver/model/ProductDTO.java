@@ -1,14 +1,15 @@
 package com.Functionserver.model;
 
 public class ProductDTO {
-    public String productName;
+    public String name;
     public Double price;
     public Long quantity;
-    public String getProductName() {
-        return productName;
+    
+    public String getName() {
+        return name;
     }
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
     public Double getPrice() {
         return price;
