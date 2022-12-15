@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.Functionserver.model.ProductDTO;
 
+import brave.sampler.Sampler;
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
@@ -25,6 +26,11 @@ public class FunctionServerApplication {
 	@Bean
 	public RestTemplate getRestTemplate(){
 		return new RestTemplate();
+	}
+
+	@Bean
+	public Sampler defaultSampler(){
+		return Sampler.ALWAYS_SAMPLE;
 	}
 
 	@Bean
