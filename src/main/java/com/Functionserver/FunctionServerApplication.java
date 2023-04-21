@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.Functionserver.model.ProductDTO;
 
-import brave.sampler.Sampler;
+// import brave.sampler.Sampler;
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
@@ -28,10 +28,10 @@ public class FunctionServerApplication {
 		return new RestTemplate();
 	}
 
-	@Bean
-	public Sampler defaultSampler(){
-		return Sampler.ALWAYS_SAMPLE;
-	}
+	// @Bean
+	// public Sampler defaultSampler(){
+	// 	return Sampler.ALWAYS_SAMPLE;
+	// }
 
 	@Bean
 	public Function<Flux<ProductDTO>, Flux<String>> checkProduct(){
